@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ec">
+  <meta name="description" content="A gentle, practical guide to growing a little herb garden on your balcony.">
+  <title>Quiet Garden — a little room to grow</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+    :root{color-scheme:light;--bg:#f5f4ec;--paper:#fffef9;--ink:#263b2b;--muted:#718071;--green:#426947;--green2:#dce8d8;--line:#e5e6dc;--sun:#d8a85a;--shadow:0 18px 60px #293b2910}
+    [data-theme="dark"]{color-scheme:dark;--bg:#18231b;--paper:#202e23;--ink:#e6ebdc;--muted:#a5b19e;--green:#a7c59b;--green2:#2b3e2d;--line:#364539;--sun:#e0bd78;--shadow:0 18px 60px #0004}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;transition:background .25s,color .25s}a{color:inherit;text-decoration:none}.wrap{max-width:1120px;padding:0 28px;margin:auto}
+    header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.03em}.brand-mark{width:34px;height:34px;border-radius:50% 50% 50% 8px;background:var(--green);color:var(--paper);display:grid;place-items:center;font-size:18px;transform:rotate(-10deg)}.brand-mark span{transform:rotate(10deg)}nav{display:flex;align-items:center;gap:30px;color:var(--muted);font-size:13px}nav a:hover{color:var(--ink)}.theme{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:30px;width:40px;height:40px;cursor:pointer;font-size:17px}
+    .hero{padding:78px 0 64px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:45px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:700;color:var(--green);display:flex;align-items:center;gap:9px}.eyebrow:before{content:'';width:22px;height:1px;background:var(--green)}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;letter-spacing:-.035em}h1{font-size:clamp(48px,6vw,76px);line-height:1.02;margin:22px 0}.hero p{font-size:16px;line-height:1.8;color:var(--muted);max-width:440px}.button{display:inline-flex;align-items:center;gap:12px;border-radius:30px;background:var(--green);color:#fff;padding:14px 22px;font-size:13px;font-weight:600;margin-top:14px;transition:transform .2s}.button:hover{transform:translateY(-2px)}.hero-art{height:380px;border-radius:180px 180px 14px 14px;position:relative;overflow:hidden;background:linear-gradient(150deg,#d6e3cc,#f2ddb3 55%,#b8c8a8);box-shadow:var(--shadow)}.sun{position:absolute;top:48px;right:62px;width:90px;height:90px;border-radius:50%;background:#f7edcf;opacity:.9}.window{position:absolute;inset:0;background:linear-gradient(90deg,#ffffff1a 49.7%,#ffffff70 50%,#ffffff1a 50.4%),linear-gradient(0deg,transparent 49%,#ffffff70 49.4%,#ffffff70 50.2%,transparent 50.6%)}.pot{position:absolute;bottom:27px;left:50%;transform:translateX(-50%);width:198px;height:145px;background:linear-gradient(90deg,#bd7854,#d49a6b 44%,#bc7552);clip-path:polygon(0 0,100% 0,86% 100%,14% 100%);border-radius:3px}.soil{position:absolute;left:calc(50% - 99px);bottom:159px;width:198px;height:23px;border-radius:50%;background:#6e553d}.stem{position:absolute;bottom:171px;left:50%;width:4px;height:150px;background:#557342;transform:rotate(3deg);border-radius:5px}.leaf{position:absolute;width:68px;height:34px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#78965a,#446c47);transform-origin:right bottom}.l1{bottom:255px;left:calc(50% - 67px);transform:rotate(23deg)}.l2{bottom:284px;left:50%;transform:rotate(-76deg) scaleX(-1)}.l3{bottom:217px;left:50%;transform:rotate(-22deg) scaleX(-1);width:55px}.l4{bottom:319px;left:calc(50% - 40px);transform:rotate(30deg) scale(.8)}.art-note{position:absolute;bottom:20px;left:20px;background:#fffef9e8;color:#30442f;border-radius:30px;padding:10px 15px;font-size:11px;letter-spacing:.03em}
+    .section{padding:56px 0}.section-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:26px}.section h2{font-size:38px;margin:10px 0 0}.section-top p{max-width:310px;color:var(--muted);font-size:13px;line-height:1.7;margin:0}.plants{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.plant{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:22px;box-shadow:var(--shadow);min-height:208px;transition:transform .2s}.plant:hover{transform:translateY(-4px)}.plant-head{display:flex;justify-content:space-between;align-items:start}.plant-icon{width:48px;height:48px;border-radius:50%;background:var(--green2);display:grid;place-items:center;font-size:25px}.sun-tag{color:#a77e36;border-radius:20px;background:#f5eddb;padding:7px 10px;font-size:10px;font-weight:600}.plant h3{font-size:24px;margin:17px 0 5px}.plant p{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:15px}.care{font-size:10px;color:var(--green);font-weight:700;letter-spacing:.04em}
+    .season{margin:50px 0 70px;display:grid;grid-template-columns:.85fr 1.15fr;background:var(--green2);border-radius:16px;overflow:hidden}.season-intro{padding:36px 38px}.season-intro h2{font-size:34px;margin:12px 0}.season-intro p{font-size:13px;color:var(--muted);line-height:1.7}.season-label{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--green);font-weight:700}.checklist{padding:30px 38px;background:var(--paper);border:1px solid var(--line);border-radius:0 16px 16px 0;display:flex;flex-direction:column;justify-content:center;gap:0}.check{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}.check:last-child{border:0}.check input{appearance:none;width:18px;height:18px;border:1px solid #a9b49f;border-radius:5px;display:grid;place-items:center;cursor:pointer;flex:none}.check input:checked{background:var(--green);border-color:var(--green)}.check input:checked:after{content:'✓';color:white;font-size:12px}.check.done span{text-decoration:line-through;opacity:.6}.progress{margin-top:12px;font-size:10px;color:var(--green);font-weight:700}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}.foot-brand{font-family:'Playfair Display',serif;color:var(--ink);font-size:15px}
+    @media(max-width:740px){.wrap{padding:0 20px}header{height:70px}nav{gap:14px}nav a{display:none}.hero{grid-template-columns:1fr;gap:32px;padding:55px 0 42px}.hero-art{height:330px}.section{padding:40px 0}.section-top{display:block}.section-top p{margin-top:12px}.plants{grid-template-columns:1fr}.plant{min-height:auto}.season{grid-template-columns:1fr;margin:35px 0 48px}.season-intro{padding:28px}.checklist{border-radius:0 0 16px 16px;padding:20px 28px}footer{gap:12px;align-items:center}.section h2{font-size:34px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="Quiet Garden home"><span class="brand-mark"><span>✳</span></span> quiet garden</a>
+      <nav aria-label="Main navigation"><a href="#plants">Choose your herbs</a><a href="#care">Seasonal care</a><button class="theme" id="themeToggle" aria-label="Switch to dark mode" title="Toggle color theme">☾</button></nav>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div><div class="eyebrow">A small guide to growing</div><h1>A little room<br>to grow.</h1><p>Turn a sunny corner into your own pocket of green. Three forgiving herbs, a few minutes of care, and a fresh harvest just outside your door.</p><a class="button" href="#plants">Meet your new herbs <span aria-hidden="true">↘</span></a></div>
+        <div class="hero-art" role="img" aria-label="Illustration of a potted herb growing beside a sunny window"><div class="sun"></div><div class="window"></div><div class="stem"></div><div class="leaf l1"></div><div class="leaf l2"></div><div class="leaf l3"></div><div class="leaf l4"></div><div class="soil"></div><div class="pot"></div><div class="art-note">☀ &nbsp; Your balcony is enough.</div></div>
+      </section>
+      <section id="plants" class="section">
+        <div class="section-top"><div><div class="eyebrow">Start with the easy ones</div><h2>Three good neighbors</h2></div><p>Pick a spot that gets a little light. These herbs are happy to share a balcony with you.</p></div>
+        <div class="plants">
+          <article class="plant"><div class="plant-head"><div class="plant-icon" aria-hidden="true">🌿</div><span class="sun-tag">☀ &nbsp;Bright light</span></div><h3>Basil</h3><p>Warm, fragrant, and generous. Pinch the tips for a bushier plant and more leaves.</p><div class="care">WATER OFTEN &nbsp;·&nbsp; LOVES WARMTH</div></article>
+          <article class="plant"><div class="plant-head"><div class="plant-icon" aria-hidden="true">🍃</div><span class="sun-tag">◐ &nbsp;Some shade</span></div><h3>Mint</h3><p>Fresh and wonderfully unfussy. Give it its own pot — it likes to spread out.</p><div class="care">KEEP SOIL MOIST &nbsp;·&nbsp; EASYGOING</div></article>
+          <article class="plant"><div class="plant-head"><div class="plant-icon" aria-hidden="true">🌱</div><span class="sun-tag">☀ &nbsp;Bright light</span></div><h3>Parsley</h3><p>A slow starter with a long season. Snip outer stems and let the middle keep growing.</p><div class="care">WATER REGULARLY &nbsp;·&nbsp; PATIENT GROWER</div></article>
+        </div>
+      </section>
+      <section id="care" class="season">
+        <div class="season-intro"><div class="season-label">Your gentle garden rhythm</div><h2>This week,<br>outside.</h2><p>A little attention goes a long way. Check off what you’ve done and let the rest wait until tomorrow.</p></div>
+        <div class="checklist" aria-label="Seasonal care checklist">
+          <label class="check"><input type="checkbox" data-task="water"><span>Check the top inch of soil; water if it feels dry</span></label>
+          <label class="check"><input type="checkbox" data-task="rotate"><span>Turn each pot so every side gets some light</span></label>
+          <label class="check"><input type="checkbox" data-task="snip"><span>Snip a few leaves for something delicious</span></label>
+          <label class="check"><input type="checkbox" data-task="look"><span>Look for new growth and enjoy the small things</span></label>
+          <div class="progress" id="progress" aria-live="polite">0 OF 4 LITTLE THINGS DONE</div>
+        </div>
+      </section>
+    </main>
+    <footer><span class="foot-brand">quiet garden</span><span>Made for the little spaces that make a home.</span><span>Grow at your own pace&nbsp; ✳</span></footer>
+  </div>
+  <script>
+    const root = document.documentElement;
+    const themeButton = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('quiet-garden-theme');
+    if (savedTheme) root.dataset.theme = savedTheme;
+    function syncThemeButton() {
+      const dark = root.dataset.theme === 'dark';
+      themeButton.textContent = dark ? '☀' : '☾';
+      themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    syncThemeButton();
+    themeButton.addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('quiet-garden-theme', root.dataset.theme);
+      syncThemeButton();
+    });
+    const checks = [...document.querySelectorAll('.check input')];
+    checks.forEach((input) => {
+      input.checked = localStorage.getItem(`quiet-garden-${input.dataset.task}`) === 'true';
+      input.addEventListener('change', () => {
+        localStorage.setItem(`quiet-garden-${input.dataset.task}`, input.checked);
+        updateProgress();
+      });
+    });
+    function updateProgress() {
+      const count = checks.filter((input) => input.checked).length;
+      document.getElementById('progress').textContent = `${count} OF 4 LITTLE THINGS DONE`;
+      checks.forEach((input) => input.closest('.check').classList.toggle('done', input.checked));
+    }
+    updateProgress();
+  </script>
+</body>
+</html>
